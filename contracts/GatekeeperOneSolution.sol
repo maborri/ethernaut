@@ -12,9 +12,9 @@ contract GatekeeperOneSolution {
     gateKeeper = GatekeeperOne(_gateOne);
   }
 
-  function enter(bytes8 _address) external {
-
-
-    gateKeeper.enter{gas: 81910}(_address);
+  function enter(address _address) external {
+    console.log('addy as uint160', uint160(_address));
+    bytes8 res = bytes8(uint64(uint160(_address)));
+    gateKeeper.enter{gas: 82164}(res);
   }
 }

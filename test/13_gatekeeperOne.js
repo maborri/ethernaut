@@ -15,11 +15,10 @@ describe('Gatekeeper One', function () {
   });
 
   it('Goes to the top', async function () {
-    const testAddress = '0x9bE997Fe545FE6e54C068b65f7fE66751EFD06af';
-    const last2bytes = `0x${testAddress.slice(testAddress.length - 4, testAddress.length)}`;
-    const last2bytesPaded = ethers.utils.zeroPad(last2bytes, 8);
-    console.log(last2bytes);
-    await this.gatekeeperOneSolution.enter(last2bytesPaded);
+    const testAddress = attacker.address;
+    console.log('Entering with address:', attacker.address);
+
+    await this.gatekeeperOneSolution.enter(testAddress);
 
     expect(await this.gatekeeperOne.entrant()).to.be.eq(testAddress);
   });
