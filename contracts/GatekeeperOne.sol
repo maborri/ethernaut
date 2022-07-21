@@ -14,8 +14,6 @@ contract GatekeeperOne {
   }
 
   modifier gateTwo() {
-    console.log(gasleft()); // 248 gas
-
     require(gasleft().mod(8191) == 0);
     _;
   }
