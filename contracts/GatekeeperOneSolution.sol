@@ -13,8 +13,8 @@ contract GatekeeperOneSolution {
   }
 
   function enter(address _address) external {
-    console.log('addy as uint160', uint160(_address));
-    bytes8 res = bytes8(uint64(uint160(_address)));
-    gateKeeper.enter{gas: 82164}(res);
+    bytes8 addressAsBytes8 = bytes8(uint64(uint160(_address)));
+    addressAsBytes8 = addressAsBytes8 & 0x000000FF0000FFFF;
+    gateKeeper.enter{gas: 82164}(addressAsBytes8);
   }
 }
