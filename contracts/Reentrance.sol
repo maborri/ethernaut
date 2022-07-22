@@ -2,7 +2,6 @@
 pragma solidity ^0.6.0;
 
 import './utils/SafeMath.sol';
-import "hardhat/console.sol";
 
 contract Reentrance {
   
