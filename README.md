@@ -1,13 +1,6 @@
-# Sample Hardhat Project
+# ETHERNAUT
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+My personal approach to solve the ETHERNAUT wargame.
+Keep in mind that these solutions weren't contrasted against others and may not be the most optimal ones or even implement the intended approach.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+https://ethernaut.openzeppelin.com/
